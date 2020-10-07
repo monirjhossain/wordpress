@@ -1,0 +1,79 @@
+
+---Upload files---
+Redux file was not uploaded. Error: Specified file failed upload test.
+
+---Upload files---
+The import files were successfully uploaded!
+Initial max execution time = 12000
+Files info:
+Site URL = http://localhost/project1
+Data file = D:\xampp\htdocs\Project1/wp-content/uploads/2020/09/versatile-business-dark-free.xml
+Widget file = D:\xampp\htdocs\Project1/wp-content/uploads/2020/09/versatile-business-dark-free.wie
+Customizer file = D:\xampp\htdocs\Project1/wp-content/uploads/2020/09/versatile-business-dark-free.dat
+Redux files:
+not defined!
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[WARNING] Failed to import "Newsletter": Invalid post type mc4wp-form
+
+
+------
+New AJAX call!
+[WARNING] Failed to import product_visibility exclude-from-catalog
+[WARNING] Failed to import product_visibility exclude-from-search
+[WARNING] Failed to import product_type external
+[WARNING] Failed to import product_visibility featured
+[WARNING] Failed to import product_type grouped
+[WARNING] Failed to import product_visibility outofstock
+[WARNING] Failed to import product_visibility rated-1
+[WARNING] Failed to import product_visibility rated-2
+[WARNING] Failed to import product_visibility rated-3
+[WARNING] Failed to import product_visibility rated-4
+[WARNING] Failed to import product_visibility rated-5
+[WARNING] Failed to import product_type simple
+[WARNING] Failed to import product_cat Uncategorized
+[WARNING] Failed to import product_type variable
+[WARNING] Failed to import "Newsletter": Invalid post type mc4wp-form
+
+
+---Importing widgets---
+Sidebar : 
+
+Search - No Title - Widget already exists
+Recent Posts - Recent Post - Imported
+Archives - No Title - Imported
+Gallery - Gallery - Imported
+Categories - No Title - Imported
+Tag Cloud - No Title - Imported
+
+Footer 1 : 
+
+Text - About Us - Imported
+
+Footer 2 : 
+
+Gallery - Gallery - Imported
+
+Footer 3 : 
+
+Text - Newsletter - Imported
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!

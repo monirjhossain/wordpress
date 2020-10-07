@@ -1,0 +1,41 @@
+
+---Upload files---
+Redux file was not uploaded. Error: Specified file failed upload test.
+
+---Upload files---
+The import files were successfully uploaded!
+Initial max execution time = 12000
+Files info:
+Site URL = http://localhost/project1
+Data file = D:\xampp\htdocs\Project1/wp-content/uploads/2020/09/versatile-business-dark-free-1.xml
+Widget file = D:\xampp\htdocs\Project1/wp-content/uploads/2020/09/versatile-business-dark-free-1.wie
+Customizer file = D:\xampp\htdocs\Project1/wp-content/uploads/2020/09/versatile-business-dark-free-1.dat
+Redux files:
+not defined!
+
+---Importing widgets---
+Sidebar : 
+
+Search - No Title - Widget already exists
+Recent Posts - Recent Post - Widget already exists
+Archives - No Title - Widget already exists
+Gallery - Gallery - Widget already exists
+Categories - No Title - Widget already exists
+Tag Cloud - No Title - Widget already exists
+
+Footer 1 : 
+
+Text - About Us - Widget already exists
+
+Footer 2 : 
+
+Gallery - Gallery - Widget already exists
+
+Footer 3 : 
+
+Text - Newsletter - Widget already exists
+
+
+
+---Importing customizer settings---
+Customizer settings import finished!
