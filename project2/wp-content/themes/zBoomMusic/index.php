@@ -116,6 +116,13 @@
 					<article class="row">
 						<div class="col-1-3">
 							<div class="wrap-col">
+
+								<?php
+
+
+
+								?>
+
 								<img src="<?php echo get_template_directory_uri(); ?>/images/img1.png"/>
 							</div>
 						</div>
@@ -127,6 +134,36 @@
 							</div>
 						</div>
 					</article>
+
+					<?php
+									if(have_posts()):
+
+										while(have_posts()): the_post();
+								?>
+					
+					<article class="row">
+						<div class="col-1-3">
+							<div class="wrap-col">
+								<?php the_post_thumbnail(); ?>
+								<!-- <img src="<?php //echo get_template_directory_uri(); ?>/images/img3.png"/> -->
+							</div>
+						</div>
+						<div class="col-2-3">
+							<div class="wrap-col">
+								<h2><a href="#"><?php the_title(); ?></a></h2>
+								<div class="info">By <?php the_author(); ?> on <?php the_date(); ?> with <a href="#">01 Commnets</a></div>
+								<p><?php the_content(); ?> [...]</p>
+							</div>
+						</div>
+					</article>
+
+
+					<?php 
+
+							endwhile;
+						endif;
+
+								 ?>
 					<article class="row">
 						<div class="col-1-3">
 							<div class="wrap-col">

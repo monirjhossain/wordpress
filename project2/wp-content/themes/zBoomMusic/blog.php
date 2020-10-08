@@ -95,12 +95,23 @@
 		<div class="row block03">
 			<div class="col-2-3">
 				<div class="wrap-col">
-					<article>
-						<img src="images/img1.png"/>
-						<h2><a href="#">Dreaming With Us All Night</a></h2>
-						<div class="info">[By Admin on December 01, 2012 with <a href="#">01 Commnets</a>]</div>
-						<p>Consectetur adipisci. Belit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore ater magnam aliquam quaerat voluptatem. ut enim ad minima ven m, quis nost. Rum exercitationem ullam...</p>
-					</article>
+					<?php
+									if(have_posts()):
+
+										while(have_posts()): the_post();
+								?>
+								<article>
+									<img src="<?php echo get_template_directory_uri(); ?>/images/img1.png"/>
+									<h2><a href="#"><?php the_title();?></a></h2>
+									<div class="info">[By Admin on December 01, 2020 wit <a href="#">01 Comment</a>]</div>
+									<p><?php the_content(); ?></p>
+								</article>
+								<?php 
+
+							endwhile;
+						endif;
+
+								 ?>
 					<article>
 						<img src="images/img2.png"/>
 						<h2><a href="#">Welcome To Our Great Site</a></h2>
