@@ -8,8 +8,4 @@ add_action( 'wp_enqueue_scripts', 'custom_theme_assets' );
 
 //Register menu location
 
-register_nav_menus( [ 'primary' => __( 'Primary Menu' ) ] );
-
-//Footer menu
-
-register_nav_menus( [ 'footer' => __( 'Footer Menu' ) ] );
+register_nav_menus([ 'primary' => __( 'Primary Menu' ) , 'footer' => __( 'Footer Menu' )]);
