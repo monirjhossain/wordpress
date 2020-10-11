@@ -1,27 +1,35 @@
-﻿<?php get_header(); ?>
+
+<?php get_header();?>
 <!--------------Content--------------->
 <section id="content">
 	<div class="wrap-content zerogrid">
 		<div class="row block03">
 			<div class="col-2-3">
 				<div class="wrap-col">
+					<?php
+									if(have_posts()):
 
+										while(have_posts()): the_post();
+								?>
+								<article>
+                                    <?php the_post_thumbnail(); ?>
+									<img src="<?php echo get_template_directory_uri(); ?>/images/img1.png"/>
+									<h2><a href="#"><?php the_title();?></a></h2>
+									<div class="info">[By Admin on December 01, 2020 wit <a href="#">01 Comment</a>]</div>
+									<p><?php the_content(); ?></p>
+								</article>
+								<?php 
 
-					<?php 
+							endwhile;
+						endif;
 
-						if(have_posts()):
-							while(have_posts()): the_post();
-					 ?>
+								 ?>
 					<article>
-						<?php the_post_thumbnail(); ?>
-
-						<h2><a href="#"><?php the_title(); ?></a></h2>
-						<div class="info">[By <?php the_author(); ?> on <?php the_date(); ?> with <a href="#">01 Commnets</a>]</div>
-						<p><?php the_content(); ?></p>
+						<img src="images/img2.png"/>
+						<h2><a href="#">Welcome To Our Great Site</a></h2>
+						<div class="info">[By Admin on December 01, 2012 with <a href="#">01 Commnets</a>]</div>
+						<p>Consectetur adipisci. Belit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore ater magnam aliquam quaerat voluptatem. ut enim ad minima ven m, quis nost. Rum exercitationem ullam...</p>
 					</article>
-					<?php endwhile; endif; ?>
-
-					
 					<ul id="pagi">
 						<li><a class="current" href="#">1</a></li>
 						<li><a href="#">2</a></li>
@@ -36,7 +44,7 @@
 					<div class="box">
 						<div class="heading"><h2>Latest Albums</h2></div>
 						<div class="content">
-							<img src="<?php echo get_template_directory_uri();?>/images/albums.png"/>
+							<img src="images/albums.png"/>
 						</div>
 					</div>
 					<div class="box">
@@ -59,4 +67,7 @@
 		</div>
 	</div>
 </section>
-<?php get_footer(); ?>
+<!--------------Footer--------------->
+<?php get_footer();?>
+
+</body></html>
