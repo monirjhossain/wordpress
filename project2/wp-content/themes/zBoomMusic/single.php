@@ -12,6 +12,7 @@
 										while(have_posts()): the_post();
 								?>
 								<article>
+                                    <?php the_post_thumbnail(); ?>
 									<img src="<?php echo get_template_directory_uri(); ?>/images/img1.png"/>
 									<h2><a href="#"><?php the_title();?></a></h2>
 									<div class="info">[By Admin on December 01, 2020 wit <a href="#">01 Comment</a>]</div>
