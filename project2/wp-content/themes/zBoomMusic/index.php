@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -7,10 +7,10 @@
 
     <!-- Basic Page Needs
   ================================================== -->
-	<meta charset="utf-8">
-	<title>zBoomMusic Free Html5 Responsive Template</title>
-	<meta name="description" content="Free Html5 Templates and Free Responsive Themes Designed by Kimmy | zerotheme.com">
-	<meta name="author" content="www.zerotheme.com">
+	<meta charset="<?php bloginfo('charset'); ?>">
+	<title><?php bloginfo('name'); ?></title>
+	<meta name="description" content="<?php bloginfo('description'); ?>>
+	<meta name="author" content="Monir Hossain">
 	
     <!-- Mobile Specific Metas
   ================================================== -->
@@ -18,10 +18,11 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/zerogrid.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsive.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/responsiveslides.css" />
+  	<link rel="stylesheet" href="<?php echo get_template_uri();?>/css/zerogrid.css">
+	<link rel="stylesheet" href="<?php echo get_template_uri();?>/css/style.css">
+    <link rel="stylesheet" href="<?php echo get_template_uri();?>/css/responsive.css">
+    <link rel="stylesheet" href="<?php echo get_template_uri();?>/css/responsiveslides.css" />
+    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url');?>" media="all">
 	
 	<!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
@@ -35,9 +36,9 @@
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
 	
-	<link href='./images/favicon.ico' rel='icon' type='image/x-icon'/>
-	<script src="js/jquery.min.js"></script>
-	<script src="js/responsiveslides.js"></script>
+	<link href='<?php echo get_template_uri();?>/images/favicon.ico' rel='icon' type='image/x-icon'/>
+	<script src="<?php echo get_template_uri();?>/js/jquery.min.js"></script>
+	<script src="<?php echo get_template_uri();?>/js/responsiveslides.js"></script>
 	<script>
 		$(function () {
 		  $("#slider").responsiveSlides({
@@ -55,7 +56,7 @@
 <!--------------Header--------------->
 <header>
 	<div class="wrap-header zerogrid">
-		<div id="logo"><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png"/></a></div>
+		<div id="logo"><a href="#"><img src="./images/logo.png"/></a></div>
 		
 		<div id="search">
 			<div class="button-search"></div>
@@ -64,10 +65,30 @@
 	</div>
 </header>
 
-<?php 
-
-	get_header();
- ?>
+<nav>
+	<div class="wrap-nav zerogrid">
+		<div class="menu">
+			<ul>
+				<li class="current"><a href="index.html">Home</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+				<li><a href="single.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		
+		<div class="minimenu"><div>MENU</div>
+			<select onchange="location=this.value">
+				<option></option>
+				<option value="index.html">Home</option>
+				<option value="blog.html">Blog</option>
+				<option value="gallery.html">Gallery</option>
+				<option value="single.html">About</option>
+				<option value="contact.html">Contact</option>
+			</select>
+		</div>		
+	</div>
+</nav>
 
 <div class="featured">
 	<div class="wrap-featured zerogrid">
@@ -116,14 +137,7 @@
 					<article class="row">
 						<div class="col-1-3">
 							<div class="wrap-col">
-
-								<?php
-
-
-
-								?>
-
-								<img src="<?php echo get_template_directory_uri(); ?>/images/img1.png"/>
+								<img src="images/img1.png"/>
 							</div>
 						</div>
 						<div class="col-2-3">
@@ -134,40 +148,10 @@
 							</div>
 						</div>
 					</article>
-
-					<?php
-									if(have_posts()):
-
-										while(have_posts()): the_post();
-								?>
-					
 					<article class="row">
 						<div class="col-1-3">
 							<div class="wrap-col">
-								<?php the_post_thumbnail(); ?>
-								<!-- <img src="<?php //echo get_template_directory_uri(); ?>/images/img3.png"/> -->
-							</div>
-						</div>
-						<div class="col-2-3">
-							<div class="wrap-col">
-								<h2><a href="#"><?php the_title(); ?></a></h2>
-								<div class="info">By <?php the_author(); ?> on <?php the_date(); ?> with <a href="#">01 Commnets</a></div>
-								<p><?php the_content(); ?> [...]</p>
-							</div>
-						</div>
-					</article>
-
-
-					<?php 
-
-							endwhile;
-						endif;
-
-								 ?>
-					<article class="row">
-						<div class="col-1-3">
-							<div class="wrap-col">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/img2.png"/>
+								<img src="images/img2.png"/>
 							</div>
 						</div>
 						<div class="col-2-3">
@@ -181,7 +165,7 @@
 					<article class="row">
 						<div class="col-1-3">
 							<div class="wrap-col">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/img3.png"/>
+								<img src="images/img3.png"/>
 							</div>
 						</div>
 						<div class="col-2-3">
@@ -195,7 +179,7 @@
 					<article class="row">
 						<div class="col-1-3">
 							<div class="wrap-col">
-								<img src="<?php echo get_template_directory_uri(); ?>/images/img4.png"/>
+								<img src="images/img4.png"/>
 							</div>
 						</div>
 						<div class="col-2-3">
@@ -213,7 +197,7 @@
 					<div class="box">
 						<div class="heading"><h2>Latest Albums</h2></div>
 						<div class="content">
-							<img src="<?php echo get_template_directory_uri(); ?>/images/albums.png"/>
+							<img src="images/albums.png"/>
 						</div>
 					</div>
 					<div class="box">

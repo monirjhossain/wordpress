@@ -13,8 +13,4 @@ add_theme_support('post-thumbnails');
 
 //Register menu location
 
-register_nav_menus( [ 'primary' => __( 'Primary Menu' ) ] );
-
-//Footer menu
-
-register_nav_menus( [ 'footer' => __( 'Footer Menu' ) ] );
+register_nav_menus([ 'primary' => __( 'Primary Menu' ) , 'footer' => __( 'Footer Menu' )]);
