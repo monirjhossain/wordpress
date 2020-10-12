@@ -7,7 +7,7 @@
 	<meta charset="<?php bloginfo('charset'); ?>">
 	<title><?php bloginfo('name');?></title>
 	<meta name="description" content="<?php bloginfo('description');?>">
-	<meta name="author" content="Monir Hossain"><?php echo get_template_directory_uri();?>/
+	<meta name="author" content="Monir Hossain">
 	
     <!-- Mobile Specific Metas
   ================================================== -->
@@ -70,57 +70,40 @@
 	</div>
 </div>
 <header>
+
 	
 		<nav class="wrap-menu">
 			<div class="zerogrid">
 				<div id="menu-trigger">Menu</div> 
 				<?php wp_nav_menu(array(
-					'theme_location' => 'primary',
-					'container'=> '',
-					'container_class'=> '',
-				)); ?>   
-				<ul id="menu" style="display: none;">
-					<li><a href="index.html">Home</a></li>
-					<li>
-						<a href="#">Categories <i class="fa fa-chevron-down"></i></a>
-						<ul>
-							<li>
-								<a href="#">Item 01</a>
-							</li>
-							<li>
-								<a href="#">Item 02</a>
-							</li>
-							<li>
-								<a href="#">Item 03 <i class="fa fa-chevron-right" style="margin: 2px 3px 2px;"></i></a>
-								<ul>
-									<li><a href="#">Item 31</a></li>
-									<li><a href="#">Item 32</a></li>
-								</ul>				
-							</li>
-							<li>
-								<a href="#">Item 04 <i class="fa fa-chevron-right" style="margin: 2px 3px 2px;"></i></a>				
-								<ul>
-									<li><a href="#">Item 41</a></li>
-									<li><a href="#">Item 42</a></li>
-									<li><a href="#">Item 43</a></li>
-									<li><a href="#">Item 44</a></li>
-								</ul>	
-							</li>
-						</ul>
-					</li>
-					<li><a href="single.html">About</a></li>
-					<li><a href="archive.html">Blog</a></li>
-					<li><a href="contact.html">Contact</a></li>
-					<li style="float:right !important">
-						<form method="get" action="/search" id="search" class="f-right">
-							<input name="q" type="text" size="40" placeholder="Search..." />
-						</form>
-					</li>
-				</ul>
+
+					'menu'                 => '',
+			        'container'            => 'div',
+			        'container_class'      => '',
+			        'container_id'         => '',
+			        'container_aria_label' => '',
+			        //'menu_class'           => 'menu',
+			        'menu_id'              => '',
+			        'echo'                 => true,
+			        'fallback_cb'          => 'wp_page_menu',
+			        'before'               => '',
+			        'after'                => '',
+			        'link_before'          => '',
+			        'link_after'           => '',
+			        'items_wrap'           => '<ul id="menu" style="display: none;">%3$s</ul>',
+			        //'item_spacing'         => 'preserve',
+			        'depth'                => 0,
+			        'walker'               => '',
+			        'theme_location'       => 'primary',
+					)); ?>
+				   
+				
 			</div>
 		</nav>
 	
-	<div class="wrap-header">
+	
+</header>
+<div class=" slide-bg wrap-header">
 		<div class="main-header">
 			<div class="zerogrid">
 				<!-- Static Header -->
@@ -135,8 +118,6 @@
 			</div>
 		</div>
 	</div>
-</header>
-
 
 
 <!--////////////////////////////////////Container-->
@@ -204,60 +185,7 @@
 						</a>
 					</div>
 					<?php endwhile; ?>
-					<div class="col-1-4">
-						<a class="portfolio-box zoom-effect" href="single.html">
-							<img src="<?php echo get_template_directory_uri();?>/images/2.jpg" class="img-responsive" alt="">
-							<div class="portfolio-box-caption">
-								<div class="portfolio-box-caption-content">
-									<div class="project-name">
-										Pizza Name
-									</div>
-									<div class="project-category">
-										#Category
-									</div>
-									<div class="project-detail">
-										<span> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo....</span>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col-1-4">
-						<a class="portfolio-box zoom-effect" href="single.html">
-							<img src="<?php echo get_template_directory_uri();?>/images/3.jpg" class="img-responsive" alt="">
-							<div class="portfolio-box-caption">
-								<div class="portfolio-box-caption-content">
-									<div class="project-name">
-										Pizza Name
-									</div>
-									<div class="project-category">
-										#Category
-									</div>
-									<div class="project-detail">
-										<span> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo....</span>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col-1-4">
-						<a class="portfolio-box zoom-effect" href="single.html">
-							<img src="<?php echo get_template_directory_uri();?>/images/1.jpg" class="img-responsive" alt="">
-							<div class="portfolio-box-caption">
-								<div class="portfolio-box-caption-content">
-									<div class="project-name">
-										Pizza Name
-									</div>
-									<div class="project-category">
-										#Category
-									</div>
-									<div class="project-detail">
-										<span> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque la udantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo....</span>
-									</div>
-								</div>
-							</div>
-						</a>
-					</div>
+					
 				</div>
 			</div>
 		</section>
@@ -278,15 +206,11 @@
 					while ($testimonial->have_posts()):$testimonial->the_post(); ?>
 						<div class="col-1-2">
 							<div class="wrap-col">
-								<p><?php the_content(); ?><br><small style="float: right;">-<?php the_title(); ?></small></p>
+								<p><?php the_content(); ?><small style="float: right;">-<?php the_title(); ?></small></p>
 							</div>
 						</div>
 					<?php endwhile; ?>
-						<div class="col-1-2">
-							<div class="wrap-col">
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril.</p>
-							</div>
-						</div>
+						
 					</div>
 					<div class="row">
 						<blockquote><p>Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet vultatup duista et iusto odio dignissim qui.</p></blockquote>
@@ -355,21 +279,16 @@
 				<div class="row wrap-box"><!--Start Box-->
 					<div class="row"><!--Testimonials Box-->
 						<div id="owl-testimonials" class="owl-carousel t-center">
+
+								<?php $testimonial= new WP_Query(array('post_type'=>'testimonial'));
+								while ($testimonial->have_posts()):$testimonial->the_post(); ?>					
 							<div class="item testimonials-item">
-								<img src="<?php echo get_template_directory_uri();?>/images/partner3.png" />
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-								<h5>Catherine Grace - America</h5>
+								<?php the_post_thumbnail();?>
+								<p><?php the_content(); ?></p>
+								<h5><?php the_title(); ?></h5>
 							</div>
-							<div class="item testimonials-item">
-								<img src="<?php echo get_template_directory_uri();?>//partner1.png" />
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-								<h5>Catherine Grace - America</h5>
-							</div>
-							<div class="item testimonials-item">
-								<img src="<?php echo get_template_directory_uri();?>/images/partner2.png" />
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
-								<h5>Catherine Grace - America</h5>
-							</div>
+							<?php endwhile; ?>
+							
 						</div>
 					</div>
 				</div>
@@ -476,7 +395,7 @@
 </footer>
 
 	<!-- Js Menu -->
-	<script src="js/jquery183.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/jquery183.min.js"></script>
 	<script type="text/javascript">
 		$(function() {
 			if ($.browser.msie && $.browser.version.substr(0,1)<7)
@@ -563,7 +482,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7V-mAjEzzmP6PCQda8To0ZW_o3UOCVCE&callback=initMap" async defer></script>
 	
 	<!-- carousel -->
-	<script src="owl-carousel/owl.carousel.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/owl-carousel/owl.carousel.js"></script>
     <script>
     $(document).ready(function() {
       $("#owl-testimonials").owlCarousel({

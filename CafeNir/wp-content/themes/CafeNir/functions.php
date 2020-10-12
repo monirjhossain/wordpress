@@ -50,5 +50,21 @@ function custom_post_type(){
 	                ),
 	        )
 	    );
+
+	register_post_type('team',
+	        array(
+	            'labels'      => array(
+	                'name'          => __('team', 'cafenir'),
+	                'singular_name' => __('team', 'cafenir'),
+	            ),
+	                'public'      => true,
+	                'has_archive' => true,
+	                'supports' =>array(
+	                	'editor',
+	                	'title',
+	                	'thumbnail'
+	                ),
+	        )
+	    );
 }
 add_action('init', 'custom_post_type');

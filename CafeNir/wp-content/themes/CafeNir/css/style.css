@@ -105,7 +105,8 @@ body .wrap-body{}
 /* ---------------------------------------------------------------------------- */
 /* -------------------------------------Header--------------------------------- */
 /* ---------------------------------------------------------------------------- */
-header{background: url(../images/showcase_bg.jpg) no-repeat center top;color:#fff;min-height: 950px;}
+header{color:#fff;}
+.slide-bg{background: url(../images/showcase_bg.jpg) no-repeat center top;color:#fff;min-height: 950px;}
 header.sub-header{background:#1D2027;min-height: 120px;}
 header .wrap-header{}
 header .main-header{text-align: center;padding-top: 100px}
