@@ -70,25 +70,7 @@ if ( ! function_exists( 'bready_setup' ) ) :
 		 );
 		 add_theme_support( 'custom-logo', $defaults );
 
-		 //Slider Option
-
-		 add_action( 'init', 'create_custom_post_type' );
-
-		function create_custom_post_type() {
-
-		$args = array(
-		  'labels' => array(
-		   'name' => __( 'Slider' ),
-		   'singular_name' => __( 'Slider' )
-		  ),
-		  'public' => true,
-		  'has_archive' => false,
-		  'rewrite' => array('slug' => 'slider'),
-		 );
-
-		register_post_type( 'slider',$args);
-		}
-		// Hooking up our function to theme setup
+		
 
 
 }
